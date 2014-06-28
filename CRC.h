@@ -2,21 +2,25 @@
 
 #include "toolkit.h"
 
-class toolkit::CRC {
+class toolkit::CRC
+{
 public:
 	// constructors
 
-	CRC( std::string init ) {
+	CRC(std::string init)
+	{
 		this->stringData = init;
 	}
 
-	~CRC() {
+	~CRC()
+	{
 		// delete
 	}
 
 	// operators
 
-	void operator = ( std::string init ) {
+	void operator = (std::string init)
+	{
 		this->stringData = init;
 	}
 

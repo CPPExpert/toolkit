@@ -6,26 +6,27 @@
 
 #include <hydrogen/interfaces.h>
 
-namespace hydrogen {
-	extern interfaces *csgo;
+namespace hydrogen
+{
+extern interfaces* csgo;
 
-	class renderer;
+class renderer;
 };
 
 class TraceFilter : public ITraceFilter
 {
 public:
-    bool ShouldHitEntity( IHandleEntity* pEntityHandle, int contentsMask )
-    {
-        return !( pEntityHandle == pSkip );
-    }
+	bool ShouldHitEntity(IHandleEntity* pEntityHandle, int contentsMask)
+	{
+		return !(pEntityHandle == pSkip);
+	}
 
-    virtual TraceType_t GetTraceType() const
-    {
-        return TRACE_EVERYTHING;
-    }
+	virtual TraceType_t GetTraceType() const
+	{
+		return TRACE_EVERYTHING;
+	}
 
-    void* pSkip;
+	void* pSkip;
 };
 
 
